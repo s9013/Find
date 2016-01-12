@@ -1,0 +1,13 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+    <h2>Welcome to Ionic</h2>
+    <lable>实况天气:</lable>
+    {{weather.now.cond.txt}}
+    <br>
+    {{weather.now}}
+    {{weather.aqi}}
+    
+    <button ng-click="test()" class="button button-full button-positive">获取天气</button>
+
+  </ion-content>
+</ion-view>
