@@ -56,5 +56,22 @@ service.factory('$data',function($http){
              var url = config.basePath + "util/weather?city=beijing&callback=JSON_CALLBACK";
              return $http.jsonp(url);
         },
+
+
+        discoverFind  : function(tableName,requestParams){
+             var url = config.basePath + "discover/find?callback=JSON_CALLBACK";
+             return $http.jsonp(url);
+        },
+        discoverFindById  : function(tableName,requestParams){
+             var url = config.basePath + "discover/findById?callback=JSON_CALLBACK";
+             console.log('parms' + requestParams);
+             return $http.jsonp(url,{params:requestParams});
+        },
+
+        login : function(tableName,requestParams){
+             var url = config.basePath + "api/login?callback=JSON_CALLBACK";
+             console.log('parms' + requestParams);
+             return $http.jsonp(url,{params:requestParams});
+        }
     }
 });
